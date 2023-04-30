@@ -70,6 +70,7 @@ class MainActivity : AppCompatActivity() {
             override fun onClick(position: Int, model: HappyPlaceModel) {
                 val intent = Intent(this@MainActivity, HappyPlaceDetailActivity::class.java)
                 startActivity(intent)
+                intent.putExtra(EXTRA_PACE_DETAILS,model)
             }
         })
 
@@ -77,5 +78,6 @@ class MainActivity : AppCompatActivity() {
 
     companion object{
         private const val ADD_PLACE_ACTIVITY_REQUEST_CODE = 1
+        const val EXTRA_PACE_DETAILS = "extra_pace_deatils"
     }
 }
